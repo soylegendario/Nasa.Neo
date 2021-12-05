@@ -1,3 +1,4 @@
+using LSharp.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -27,8 +28,8 @@ namespace Nasa.Neo.Api
             services.Configure<NeoServiceSettings>(neoOptions);
 
             services.AddHttpClient();
-            
-            services.AddScoped<INeoService, NeoService>();
+
+            services.AddInjectables();
             
             services.AddSwaggerGen(c =>
             {

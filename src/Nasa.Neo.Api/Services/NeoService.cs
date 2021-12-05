@@ -5,6 +5,8 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Flurl;
+using LSharp.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Nasa.Neo.Api.Dto;
 using Nasa.Neo.Api.Settings;
@@ -13,6 +15,7 @@ using Newtonsoft.Json.Linq;
 namespace Nasa.Neo.Api.Services
 {
     /// <inheritdoc />
+    [Injectable(ServiceLifetime.Scoped)]
     public class NeoService : INeoService
     {
         private readonly IHttpClientFactory _httpClientFactory;
