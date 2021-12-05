@@ -5,7 +5,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using Nasa.Neo.Api.Services;
 using Nasa.Neo.Api.Settings;
 
 namespace Nasa.Neo.Api
